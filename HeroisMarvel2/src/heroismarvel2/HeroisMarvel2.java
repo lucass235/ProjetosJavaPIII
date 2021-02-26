@@ -112,8 +112,12 @@ public class HeroisMarvel2 {
             System.err.println("Nenhum cadastro para Consultar.");
             System.out.println("===================================================");
         } else {
-            System.out.println("Informe a numeração do personagem: ");
+            System.out.print("Informe a numeração do personagem: ");
             resp = in.nextInt() - 1;
+            while (resp < 0) {
+                System.out.print("Resposta inválida, digite um valor maior que 0: ");
+                resp = in.nextInt() - 1;
+            }
             if (resp < num) {
                 System.out.println("================================================");
                 System.out.printf("Nome: %s\nPoder: %s\nAno de criação: %d\n",
@@ -135,8 +139,12 @@ public class HeroisMarvel2 {
             System.err.println("Nenhum cadastro para Remover.");
             System.out.println("===================================================");
         } else {
-            System.out.println("Informe a numeração do personagem: ");
+            System.out.print("Informe a numeração do personagem: ");
             resp = in.nextInt() - 1;
+            while (resp < 0) {
+                System.out.print("Resposta inválida, digite um valor maior que 0: ");
+                resp = in.nextInt() - 1;
+            }
             if (resp < num) {
                 for (int i = resp; i < num; i++) {
                     no[i] = no[i + 1];
